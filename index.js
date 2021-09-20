@@ -1165,7 +1165,7 @@ client.on("message", message => {
       //replaces every comma into a plus in the string
       let newargs = strargs.replace(/,/g, '+');
       //pulls post from api and sends it
-      require("request")("https://danbooru.donmai.us/posts.json?limit=1&tags=Ayanda_Risu+order%3Arandom" + "+" + newargs,
+      require("request")("https://danbooru.donmai.us/posts.json?limit=1&tags=Ayunda_Risu+order%3Arandom" + "+" + newargs,
         function(err, res, body) {
           let data = JSON.parse(body);
           if (data['0'] !== undefined) {
