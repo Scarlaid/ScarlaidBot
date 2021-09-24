@@ -46,7 +46,7 @@ module.exports = {
         msg.setFooter(`Requested by: ${message.author.tag}`)
         if (messageAttachment) msg.setImage(messageAttachment);
         channelS.send(msg)
-        .then(msg => {msg.delete({ timeout: 100000 })
+        .then(msg => {msg.delete({ timeout: 300000 })
       });
        }
     }

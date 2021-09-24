@@ -24,7 +24,7 @@ module.exports = {
 
         message.channel.send(`**Danh sách nhạc - ${message.guild.name} ${client.emotes.queue} ${client.player.getQueue(message).loopMode ? '(Lặp lại)' : ''}**\nHiện tại : ${queue.playing.title} | ${queue.playing.author}\n\n` + (queue.tracks.map((track, i) => {
             return `**#${i + 1}** - ${track.title} | ${track.author} (Requested by : ${track.requestedBy.username})`
-        }).slice(0, 5).join('\n') + `\n\n${queue.tracks.length > 5 ? `Và **${queue.tracks.length - 5}** bài nhạc...` : `Trong playlist **${queue.tracks.length}** bài nhạc...`}`))
+        }).slice(0, 5).join('\n') + `\n\n${queue.tracks.length > 5 ? `Và **${queue.tracks.length - 5}** bài nhạc...` : `Trong playlist **${queue.tracks.length}** bài nhạc khác trong hàng chờ...`}`))
         .then(msg => {
             setTimeout(() => msg.delete(), 15000)
           });
