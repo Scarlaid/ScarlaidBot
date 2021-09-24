@@ -28,7 +28,7 @@ module.exports = {
         message.channel.send({
             embed: {
                 color: 'RED',
-                author: { name: track.title },
+                author: { name: track.title, url: track.url },
                 footer: { text: '24/7 Uptime by Scarlaid' },
                 fields: [
                     { name: 'Kênh', value: track.author, inline: true },
